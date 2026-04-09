@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Surface scale — RGB channels for Tailwind opacity support */
+  --color-surface-base: 10 10 11;
+  --color-surface-raised: 20 20 22;
+  --color-surface-overlay: 30 30 34;
+  --color-surface-subtle: 26 26 30;
+
+  /* Text / ink scale */
+  --color-ink-primary: 240 240 242;
+  --color-ink-secondary: 161 161 170;
+  --color-ink-muted: 99 99 110;
+
+  /* Border */
+  --color-border: 39 39 42;
+
+  /* Accent — peach */
+  --color-peach: 255 176 136;
+  --color-peach-dim: 240 152 104;
+
+  /* Accent — lavender */
+  --color-lavender: 180 160 229;
+  --color-lavender-dim: 155 130 216;
+
+  /* Status colors */
+  --color-error: 239 68 68;
+  --color-error-dim: 220 38 38;
+  --color-success: 34 197 94;
+  --color-success-dim: 22 163 74;
+  --color-warning: 245 158 11;
+  --color-warning-dim: 217 119 6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: rgb(var(--color-surface-base));
+  color: rgb(var(--color-ink-primary));
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(var(--color-surface-base));
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--color-border));
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--color-ink-muted));
+}
